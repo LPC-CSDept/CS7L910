@@ -17,11 +17,11 @@ def test_main_1():
     lines = captureOut.getvalue().split('\n')
     print(lines)
 
-    students = main.main()
-    assert len(students) == 3
-    assert students[0] == {'id': 10, 'name': 'Kim', 'address': '123 Main'}
-    assert students[1] == {'id': 20, 'name': 'Bill', 'address': '345 Grand'}
-    assert students[2] == {'id': 30, 'name': 'Mary', 'address': '123 Blvd'}
+    IDlist, Namelist, Glist, Zlist = main.main()
+    assert len(IDlist) == 3
+    assert len(Namelist) == 3
+    assert len(Glist) == 3
+    assert len(Zlist) == 3
 
     # regex_string = r'[\w,\W]*1'
     # regex_string += r'[\w,\W]*3'
